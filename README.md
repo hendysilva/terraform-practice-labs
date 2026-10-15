@@ -10,6 +10,8 @@ What I learned: variables are inputs, main.tf is what gets built, outputs are wh
 Builds a VPC, an internet gateway, a public route table and three public subnets, one in each Availability Zone.
 What I learned: how count and cidrsubnet create several similar resources, how subnets, route tables and the internet gateway connect, and why spreading across 3 AZs keeps things running if one zone fails.
 
-## Notes
-- State files and the .terraform folder are not committed (see .gitignore).
-- Next: modules, then an EKS cluster with Terraform.
+## Lab 4: Reusable VPC module
+- A child module (modules/vpc) holds the VPC, internet gateway, 3 public subnets, route table and a security group.
+- The root (lab4/main.tf) calls the module twice: dev (10.0.0.0/16) and staging (10.1.0.0/16). Same code, different inputs.
+- The security group allows HTTPS in and all traffic out, written from the Terraform Registry docs.
+- Result: 24 resources created in one apply, then destroyed.
