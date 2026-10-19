@@ -16,4 +16,11 @@ The root (lab4/main.tf) calls the module twice: dev (10.0.0.0/16) and staging (1
 The security group allows HTTPS in and all traffic out, written from the Terraform Registry docs.
 Result: 24 resources created in one apply, then destroyed.
 
-## Lab 5: New module
+## Lab 5: EKS cluster with Terraform (planned, not done yet)
+Goal: create a small Kubernetes cluster on AWS EKS with Terraform in a Pluralsight sandbox, then destroy it.
+Plan:
+Reuse the VPC module from Lab 4 for the network
+Define the EKS cluster and a node group, if the sandbox allows EKS
+Check the cluster with kubectl (get nodes, get pods)
+Run terraform destroy so nothing keeps running
+Status: planned for after my interviews. I will add what I learned when it is done.
