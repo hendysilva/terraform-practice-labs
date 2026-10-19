@@ -15,3 +15,5 @@ A child module (modules/vpc) holds the VPC, internet gateway, 3 public subnets, 
 The root (lab4/main.tf) calls the module twice: dev (10.0.0.0/16) and staging (10.1.0.0/16). Same code, different inputs.
 The security group allows HTTPS in and all traffic out, written from the Terraform Registry docs.
 Result: 24 resources created in one apply, then destroyed.
+
+## Lab 5: 
