@@ -16,4 +16,4 @@ The root (lab4/main.tf) calls the module twice: dev (10.0.0.0/16) and staging (1
 The security group allows HTTPS in and all traffic out, written from the Terraform Registry docs.
 Result: 24 resources created in one apply, then destroyed.
 
-## Lab 5: 
+## Lab 5: New module
